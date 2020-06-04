@@ -39,7 +39,7 @@ try:
 except ipaddress.AddressValueError:
     sys.exit(f"The specified IP address {ip_addr} is not a valid IPv4 address")
 
-# Would be better with a loop, but that concept is nog explained up to this
+# Would be better with a loop, but that concept is not explained up to this
 # point.
 oct1 = int(ip_addr.split(".")[0])
 oct2 = int(ip_addr.split(".")[1])
