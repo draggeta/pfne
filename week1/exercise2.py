@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
-'''2. Prompt a user to enter in an IP address from standard input. Read the IP
+"""
+2. Prompt a user to enter in an IP address from standard input. Read the IP
 address in and break it up into its octets. Print out the octets in decimal,
 binary, and hex.
 
@@ -18,9 +19,10 @@ Please enter an IP address: 80.98.100.240
 
 Four columns, fifteen characters wide, a header column, data centered in the
 column.
-'''
+"""
 
 from __future__ import print_function, unicode_literals
+
 import ipaddress
 import sys
 
@@ -38,13 +40,13 @@ except ipaddress.AddressValueError:
 
 # Would be better with a loop, but that concept is nog explained up to this
 # point.
-oct1 = int(ip_addr.split('.')[0])
-oct2 = int(ip_addr.split('.')[1])
-oct3 = int(ip_addr.split('.')[2])
-oct4 = int(ip_addr.split('.')[3])
+oct1 = int(ip_addr.split(".")[0])
+oct2 = int(ip_addr.split(".")[1])
+oct3 = int(ip_addr.split(".")[2])
+oct4 = int(ip_addr.split(".")[3])
 
 # Works in Py3 and Py2
-print("{:^15}{:^15}{:^15}{:^15}".format('Octet1', 'Octet2', 'Octet3', 'Octet4'))
+print("{:^15}{:^15}{:^15}{:^15}".format("Octet1", "Octet2", "Octet3", "Octet4"))
 print("-" * 60)
 print("{:^15}{:^15}{:^15}{:^15}".format(oct1, oct2, oct3, oct4))
 print("{:^15}{:^15}{:^15}{:^15}".format(bin(oct1), bin(oct2), bin(oct3), bin(oct4)))
