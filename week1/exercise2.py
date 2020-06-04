@@ -53,8 +53,15 @@ print("{:^15}{:^15}{:^15}{:^15}".format(bin(oct1), bin(oct2), bin(oct3), bin(oct
 print("{:^15}{:^15}{:^15}{:^15}".format(hex(oct1), hex(oct2), hex(oct3), hex(oct4)))
 
 # This is the preferred way from Py3.6 on.
-print(f"{'Octet1':^15}{'Octet2':^15}{'Octet3':^15}{'Octet4':^15}")
-print(f"{'-' * 60}")
-print(f"{oct1:^15}{oct2:^15}{oct3:^15}{oct4:^15}")
-print(f"{bin(oct1):^15}{bin(oct2):^15}{bin(oct3):^15}{bin(oct4):^15}")
-print(f"{hex(oct1):^15}{hex(oct2):^15}{hex(oct3):^15}{hex(oct4):^15}")
+# print(f"{'Octet1':^15}{'Octet2':^15}{'Octet3':^15}{'Octet4':^15}")
+# print(f"{'-' * 60}")
+# print(f"{oct1:^15}{oct2:^15}{oct3:^15}{oct4:^15}")
+# print(f"{bin(oct1):^15}{bin(oct2):^15}{bin(oct3):^15}{bin(oct4):^15}")
+# print(f"{hex(oct1):^15}{hex(oct2):^15}{hex(oct3):^15}{hex(oct4):^15}")
+
+# using the b and x formatting doesn't add 0b or 0x to the output.
+# print(f"{'Octet1':^15}{'Octet2':^15}{'Octet3':^15}{'Octet4':^15}")
+# print(f"{'-' * 60}")
+# print(f"{oct1:^15}{oct2:^15}{oct3:^15}{oct4:^15}")
+# print(f"{oct1:^15b}{oct2:^15b}{oct3:^15b}{oct4:^15b}")
+# print(f"{oct1:^15x}{oct2:^15x}{oct3:^15x}{oct4:^15x}")
