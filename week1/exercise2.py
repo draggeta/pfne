@@ -32,7 +32,8 @@ try:
 except NameError:
     ip_addr = input("Please enter an IP address: ")
 
-# Validate the input to make sure it's an IPv4 address
+# Validate the input to make sure it's an IPv4 address. Overkill for now, just
+# for illustration.
 try:
     ipaddress.IPv4Address(ip_addr)
 except ipaddress.AddressValueError:
