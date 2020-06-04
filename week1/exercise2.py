@@ -23,14 +23,23 @@ column.
 
 from __future__ import print_function, unicode_literals
 
+# These are not strictly needed for the exercise. This is to explain input
+# validation and error handling.
 import ipaddress
 import sys
 
+# Using six adds some compatibility between Py2 and Py3.
+# This needs to be installed with pip though.
+import six
+
 # Read input, first option is used for Py2, the except is used for Py3.
-try:
-    ip_addr = raw_input("Please enter an IP address: ")
-except NameError:
-    ip_addr = input("Please enter an IP address: ")
+# try:
+#     ip_addr = raw_input("Please enter an IP address: ")
+# except NameError:
+#     ip_addr = input("Please enter an IP address: ")
+
+# six.moves.input()' calls 'raw_input()' in Py2 and 'input()' in Py3.
+ip_addr = six.moves.input("Please enter an IP address: ")
 
 # Validate the input to make sure it's an IPv4 address. Overkill for now, just
 # for illustration.
