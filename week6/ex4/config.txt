@@ -1,0 +1,1 @@
+ip route 192.192.192.192 /32 reject-route
